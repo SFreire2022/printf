@@ -19,7 +19,7 @@ typedef struct modificators
 /* Prototype for _printf (entry point for function)*/
 int _printf(const char *format, ...);
 /* Prototype helper functions */
-char* (*get_func(char c))(va_list);
+int* (*get_func(char c))(va_list);
 char *create_buffer(void);
 void write_buffer(char *buffer, int length, va_list ap);
 int adds2buff(char *string, char *buffer, int *length);
