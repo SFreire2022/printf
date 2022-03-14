@@ -79,7 +79,7 @@ int adds2buff(char *string, char *buffer, int *length)
 		write(1, buffer, (*length)); /* Print whole buffer in 1 syscall */
 		*length = 0; /* Reset buffer position */
 	}
-	for (i = 0; string != '\0'; i++)
+	for (i = 0; string[i] != '\0'; i++)
 	{
 		buffer[(*length)] = string[i];
 		(*length)++;
