@@ -6,7 +6,7 @@
  * @length: Position in buffer
  * Return: Count of chars written to buffer
  */
-int p_str(va_list ap, int *buffer, int *length)
+int p_str(va_list ap, char *buffer, int *length)
 {
 	char *string;
 
