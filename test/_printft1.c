@@ -12,8 +12,8 @@ char* (*get_func(char c))(va_list)
 	modif selector[] = {
 		{'b', p_itob},
 		{'c', p_char},
-		{'d', p_double},
-		{'i', p_double},
+		{'d', p_dec},
+		{'i', p_dec},
 		{'o', p_int2oct},
 		{'p', p_addr},
 		{'r', p_rev_str},
