@@ -21,7 +21,7 @@ int _printf(const char *format, ...);
 /* Prototype helper functions */
 int (*get_func(char c))(va_list, char *, int *);
 char *create_buffer(void);
-void write_buffer(char *buffer, int length, va_list ap);
+void write_buffer(char *buffer, int length);
 int adds2buff(char *string, char *buffer, int *length);
 int addc2buff(char c, char *buffer, int *length);
 int handle_modificators(char c, int *length, va_list ap, char *buffer);

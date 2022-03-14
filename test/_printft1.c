@@ -52,13 +52,11 @@ char *create_buffer(void)
  * write_buffer - Prints buffer, then frees it and frees va_list
  * @buffer: Buffer holding print-ables
  * @length: Length of print-able string
- * @ap: va_list
  */
-void write_buffer(char *buffer, int length, va_list ap)
+void write_buffer(char *buffer, int length)
 {
 	write(1, buffer, length); /* Print whole buffer in 1 syscall */
 	free(buffer);
-	va_end(ap);/* Frees whole heap memory allocation by function _printf  */
 }
 
 /*crear 1 o 2 func más para agre caract al buffer (ver desplazam en fortmat)*/
@@ -120,7 +118,6 @@ int handle_modificators(char c, int *length, va_list ap, char *buffer)
 {
 	int (*func)(va_list, char *, int *); /* point to func and argtype va_list */
 	int count = 0;
-	char *string;
 
 	if (c == '\0')
 	{
@@ -152,13 +149,14 @@ int handle_modificators(char c, int *length, va_list ap, char *buffer)
 /**
  * _printf - Prints any variadic arguments.
  * @format: a list of types of arguments passed to the function.
- * Return: Void.
+ * Return: The amount of chars printed, otherwise -1.
  */
 int _printf(const char *format, ...)
 {
 	va_list ap;
-	int i = 0, c_count = 0, length = 0;
-	char *string, *buffer;
+	int i = 0, c_count = 0, buff_pos = 0;
+	char *buffer;
+	int *length = &buff_pos;
 
 	if (format == NULL) /* If no arg passed to _printf return -1 */
 		return (-1);
@@ -179,6 +177,7 @@ int _printf(const char *format, ...)
 				return (-1);/* check if need to frees memory before exit */
 			c_count += count;
 	}
-	write_buffer(buffer, length, ap);
+	write_buffer(buffer, buff_pos);
+	va_end(ap);/* Frees whole heap memory allocation by function _printf  */
 	return (c_count);
 }
