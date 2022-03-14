@@ -13,7 +13,7 @@
 typedef struct modificators
 {
 	char id;
-	int* (*func)(va_list);
+	int* (*func)(va_list, char *, int *);
 } modif; /* alias name to refere the deta type struct modificators */
 
 /* Prototype for _printf (entry point for function)*/
