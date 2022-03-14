@@ -5,7 +5,7 @@
  * @c: Modificator for function
  * Return: Pointer to needed function
  */
-int* (*get_func(char c))(va_list, char *, int *)
+int (*get_func(char c))(va_list, char *, int *)
 {
 	int i = 0;
 
@@ -118,7 +118,7 @@ int addc2buff(char c, char *buffer, int *length)
  */
 int handle_modificators(char c, int *length, va_list ap, char *buffer)
 {
-	int* (*func)(va_list); /*Decl pointer to function func and argtype va_list */
+	int (*func)(va_list, char *, int *); /* point to func and argtype va_list */
 	int count = 0;
 	char *string;
 

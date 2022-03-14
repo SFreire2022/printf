@@ -13,13 +13,13 @@
 typedef struct modificators
 {
 	char id;
-	int* (*func)(va_list, char *, int *);
+	int (*func)(va_list, char *, int *);
 } modif; /* alias name to refere the deta type struct modificators */
 
 /* Prototype for _printf (entry point for function)*/
 int _printf(const char *format, ...);
 /* Prototype helper functions */
-int* (*get_func(char c))(va_list, char *, int *);
+int (*get_func(char c))(va_list, char *, int *);
 char *create_buffer(void);
 void write_buffer(char *buffer, int length, va_list ap);
 int adds2buff(char *string, char *buffer, int *length);
