@@ -4,7 +4,7 @@
  * @ap: char
  * @buffer: Buffer holding string to print
  * @length: Position in buffer
- * Return: number of chars eritten to buff
+ * Return: number of chars written to buff
  */
 int p_char(va_list ap, int *buffer, int *length)
 {
