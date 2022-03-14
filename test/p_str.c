@@ -9,6 +9,7 @@
 int p_str(va_list ap, char *buffer, int *length)
 {
 	char *string;
+	int count = 0;
 
 	string = va_arg(ap, char *);
 	if (string == NULL)

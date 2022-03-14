@@ -139,9 +139,9 @@ int handle_modificators(char c, int *length, va_list ap, char *buffer)
 	else
 	{
 		count = func(ap, buffer, length); /* Set count with func returned value */
-		if (str == NULL)
+		if (count == 0)
 		{
-			va_end(list);
+			va_end(ap);
 			free(buffer);
 			return (-1);
 		}

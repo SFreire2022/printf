@@ -26,16 +26,16 @@ int adds2buff(char *string, char *buffer, int *length);
 int addc2buff(char c, char *buffer, int *length);
 int handle_modificators(char c, int *length, va_list ap, char *buffer);
 /* Prototype modificator functions */
-int p_itob(va_list ap);
+int p_itob(va_list ap, char *buffer, int *length);
 int p_char(va_list ap, char *buffer, int *length);
 int p_dec(va_list ap, char *buffer, int *length);
-int p_int2oct(va_list ap);
-int p_addr(va_list ap);
-int p_rev_str(va_list ap);
-int p_rot13(va_list ap);
+int p_int2oct(va_list ap, char *buffer, int *length);
+int p_addr(va_list ap, char *buffer, int *length);
+int p_rev_str(va_list ap, char *buffer, int *length);
+int p_rot13(va_list ap, char *buffer, int *length);
 int p_str(va_list ap, char *buffer, int *length);
-int p_STR(va_list ap);
-int p_hex(va_list ap);
-int p_HEX(va_list ap);
+int p_STR(va_list ap, char *buffer, int *length);
+int p_hex(va_list ap, char *buffer, int *length);
+int p_HEX(va_list ap, char *buffer, int *length);
 
 #endif
