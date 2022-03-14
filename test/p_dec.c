@@ -7,11 +7,11 @@
  * @length: Position in buffer
  * Return: number of chars written to buff
  */
-int p_dec(va_list ap, int *buffer, int *length)
+undigned int p_dec(va_list ap, int *buffer, int *length)
 {
 	unsigned int a, b, c, d, f;
 	int n;
-	int count = 0;
+	unsigned int count = 0;
 
 	n = va_arg(ap, int);
 	if (n < 0)

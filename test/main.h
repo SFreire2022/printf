@@ -13,7 +13,7 @@
 typedef struct modificators
 {
 	char id;
-	char* (*func)(va_list);
+	int* (*func)(va_list);
 } modif; /* alias name to refere the deta type struct modificators */
 
 /* Prototype for _printf (entry point for function)*/
@@ -27,13 +27,13 @@ int addc2buff(char c, char *buffer, int *length);
 int handle_modificators(char c, int *length, va_list ap, char *buffer);
 /* Prototype modificator functions */
 char *p_itob(va_list ap);
-int p_char(va_list ap, int *buffer, int *length);
-int p_dec(va_list ap, int *buffer, int *length);
+int p_char(va_list ap, char *buffer, int *length);
+int p_dec(va_list ap, char *buffer, int *length);
 char *p_int2oct(va_list ap);
 char *p_addr(va_list ap);
 char *p_rev_str(va_list ap);
 char *p_rot13(va_list ap);
-int p_str(va_list ap, int *buffer, int *length);
+int p_str(va_list ap, char *buffer, int *length);
 char *p_STR(va_list ap);
 char *p_hex(va_list ap);
 char *p_HEX(va_list ap);

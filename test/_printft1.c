@@ -5,7 +5,7 @@
  * @c: Modificator for function
  * Return: Pointer to needed function
  */
-char* (*get_func(char c))(va_list)
+int* (*get_func(char c))(va_list)
 {
 	int i = 0;
 

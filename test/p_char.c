@@ -9,6 +9,7 @@
 int p_char(va_list ap, int *buffer, int *length)
 {
 	char c;
+	unsigned int count = 0;
 
 	c = va_arg(ap, int); /* declare as int to print special chars */
 	if (c == 0)
