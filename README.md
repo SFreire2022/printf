@@ -11,6 +11,5 @@ Programs written in C:
 | Filename | Description |
 | -------- | ----------- |
 | `printf` | function that produces output according to a format functions %c %s |
-| `b` | ddsadasdc b |
-| `c` | desc c |
+| `c` | int argument is converted to an unsigned char, then the resulting character is written |
 | `adv` | adv desc |
