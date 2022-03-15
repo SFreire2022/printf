@@ -33,6 +33,7 @@ int p_dec(va_list ap, char *buffer, int *length);
 /* int p_addr(va_list ap, char *buffer, int *length); Res for future use */
 /* int p_rev_str(va_list ap, char *buffer, int *length); Res for future use */
 /* int p_rot13(va_list ap, char *buffer, int *length); Res for future use */
+int p_unsig(va_list ap, char *buffer, int *length);
 int p_str(va_list ap, char *buffer, int *length);
 /* int p_STR(va_list ap, char *buffer, int *length); Res for future use */
 /* int p_hex(va_list ap, char *buffer, int *length); Res for future use */
