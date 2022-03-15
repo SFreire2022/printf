@@ -180,6 +180,6 @@ int _printf(const char *format, ...)
 			c_count += h_count;
 	}
 	write_buffer(buffer, buff_pos);
-	va_end(ap);/* Frees whole heap memory allocation by function _printf  */
+	va_end(ap);/* Frees the last heap memory allocation by function _printf  */
 	return (c_count);
 }
