@@ -154,7 +154,7 @@ int handle_modificators(char c, int *length, va_list ap, char *buffer)
 int _printf(const char *format, ...)
 {
 	va_list ap;
-	int i = 0, c_count = 0, buff_pos = 0;
+	int i = 0, c_count = 0, buff_pos = 0, h_count = 0;
 	char *buffer;
 	int *length = &buff_pos;
 
@@ -167,15 +167,17 @@ int _printf(const char *format, ...)
 	while (format[i] != '\0')
 	{
 		if (format[i] != '%') /* set format[i] into buffer until '%' */
+		{
 			c_count += addc2buff(format[i], buffer, length);
 			i++;
-		else /* if %, find function */
+		}
+		else /* if %, hanlde nextchar */
 		{
 			i++;
-			count = handle_modificators(format[i], length, ap, buffer);
-			if (count == -1) /* If error retturn -1 and exit form _printf function */
+			h_count = handle_modificators(format[i], length, ap, buffer);
+			if (h_count == -1) /* If error retturn -1 and exit form _printf function */
 				return (-1);/* check if need to frees memory before exit */
-			c_count += count;
+			c_count += h_count;
 	}
 	write_buffer(buffer, buff_pos);
 	va_end(ap);/* Frees whole heap memory allocation by function _printf  */
