@@ -18,6 +18,7 @@ int (*get_func(char c))(va_list, char *, int *)
 /*		{'p', p_addr}, Reserved for future use */
 /*		{'r', p_rev_str}, Reserved for future use */
 /*		{'R', p_rot13}, Reserved for future use */
+		{'u', p_dec},
 		{'s', p_str},
 /*		{'S', p_STR}, Reserved for future use */
 /*		{'x', p_hex}, Reserved for future use */
