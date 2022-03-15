@@ -28,8 +28,8 @@ int main(void)
     printf("Unsigned octal:[%o]\n", ui);
     _printf("Unsigned hexadecimal:[%x, %X]\n", ui, ui);
     printf("Unsigned hexadecimal:[%x, %X]\n", ui, ui);
-    _printf("Character:[%c]\n", 'H');
-    printf("Character:[%c]\n", 'H');
+    _printf("Character:[H:%c, len:%c, len2:%c, 28:%c 0:%c]\n", 'H', len, len2, 28, 0);
+    printf("Character:[H:%c, len:%c, len2:%c, 28:%c 0:%c]\n", 'H', len, len2, 28, 0);
     _printf("String:[%s]\n", "I am a string !");
     printf("String:[%s]\n", "I am a string !");
     _printf("Address:[%p]\n", addr);
