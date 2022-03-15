@@ -3,7 +3,7 @@
 /**
  * get_func - Returns needed function
  * @c: Modificator for function
- * Return: Pointer to needed function
+ * Return: Pointer to selected function
  */
 int (*get_func(char c))(va_list, char *, int *)
 {
@@ -12,13 +12,13 @@ int (*get_func(char c))(va_list, char *, int *)
 	modif selector[] = {
 /*		{'b', p_itob}, Reserved for future use */
 		{'c', p_char},
-		{'d', p_dec},
-		{'i', p_dec},
+/*		{'d', p_dec}, Reserved for future use */
+/*		{'i', p_dec}, Reserved for future use */
 /*		{'o', p_int2oct}, Reserved for future use */
 /*		{'p', p_addr}, Reserved for future use */
 /*		{'r', p_rev_str}, Reserved for future use */
 /*		{'R', p_rot13}, Reserved for future use */
-		{'u', p_unsig},
+/*		{'u', p_unsig}, Reserved for future use */
 		{'s', p_str},
 /*		{'S', p_STR}, Reserved for future use */
 /*		{'x', p_hex}, Reserved for future use */

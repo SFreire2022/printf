@@ -2,7 +2,7 @@
 
 /**
  * create_buffer - Creates buffer to hold string until it's ready for print
- * Return: Pointer to buffer created
+ * Return: Pointer to buffer just allocated
  */
 char *create_buffer(void)
 {

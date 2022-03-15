@@ -8,7 +8,7 @@
 /**
  * struct modificators - Struct to store id asociated to a funcion
  * @id: identifier of type to print (e.g. c means char)
- * @func: ptr to functions that print according to identifier (e.g. print_c)
+ * @func: ptr to functions that print according to identifier (e.g. p_char.c)
  */
 typedef struct modificators
 {
