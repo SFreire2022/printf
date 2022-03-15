@@ -8,7 +8,7 @@
  */
 int p_char(va_list ap, char *buffer, int *length)
 {
-	char c;
+	unsigned char c;
 	int count = 0;
 
 	c = va_arg(ap, int); /* declare as int to print special chars */
