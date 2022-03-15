@@ -2,7 +2,7 @@
 
 /**
  * create_buffer - Creates buffer to hold string until it's ready for print
- * Return: Pointer to buffer just allocated
+ * Return: Pointer to buffer created
  */
 char *create_buffer(void)
 {
@@ -21,6 +21,7 @@ char *create_buffer(void)
  */
 void write_buffer(char *buffer, int length)
 {
+	buffer[length + 1] = '\0';
 	write(1, buffer, length); /* Print whole buffer in 1 syscall */
 	free(buffer);
 }
@@ -38,13 +39,13 @@ int adds2buff(char *string, char *buffer, int *length)
 {
 	int i;
 
-	if ((*length) > 1022) /* Check if full and flush to stdo if true */
-	{
-		write(1, buffer, (*length)); /* Print whole buffer in 1 syscall */
-		*length = 0; /* Reset buffer position */
-	}
 	for (i = 0; string[i] != '\0'; i++)
 	{
+		if ((*length) > 1020) /* Check if full and flush to stdo if true */
+		{
+			write(1, buffer, (*length)); /* Print whole buffer in 1 syscall */
+			*length = 0; /* Reset buffer position */
+		}
 		buffer[(*length)] = string[i];
 		(*length)++;
 	}
@@ -61,7 +62,7 @@ int adds2buff(char *string, char *buffer, int *length)
  */
 int addc2buff(char c, char *buffer, int *length)
 {
-	if ((*length) > 1022) /* If full, flush to stdo */
+	if ((*length) > 1020) /* If full, flush to stdo */
 	{
 		write(1, buffer, (*length)); /* Print whole buffer in 1 syscall */
 		*length = 0; /* Reset buffer position */
