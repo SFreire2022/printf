@@ -11,6 +11,6 @@ Programs written in C:
 | Filename | Description |
 | -------- | ----------- |
 | `printf` | function that produces output according to a format functions %c %s |
-| `b` | desc b |
+| `b` | ddsadasdc b |
 | `c` | desc c |
 | `adv` | adv desc |
