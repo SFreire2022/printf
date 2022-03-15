@@ -10,18 +10,18 @@ int (*get_func(char c))(va_list, char *, int *)
 	int i = 0;
 
 	modif selector[] = {
-		{'b', p_itob},
+/*		{'b', p_itob}, Reserved for future use */
 		{'c', p_char},
 		{'d', p_dec},
 		{'i', p_dec},
-		{'o', p_int2oct},
-		{'p', p_addr},
-		{'r', p_rev_str},
-		{'R', p_rot13},
+/*		{'o', p_int2oct}, Reserved for future use */
+/*		{'p', p_addr}, Reserved for future use */
+/*		{'r', p_rev_str}, Reserved for future use */
+/*		{'R', p_rot13}, Reserved for future use */
 		{'s', p_str},
-		{'S', p_STR},
-		{'x', p_hex},
-		{'X', p_HEX},
+/*		{'S', p_STR}, Reserved for future use */
+/*		{'x', p_hex}, Reserved for future use */
+/*		{'X', p_HEX}, Reserved for future use */
 		{'\0', NULL}
 	};
 
