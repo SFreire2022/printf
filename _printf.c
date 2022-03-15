@@ -12,8 +12,8 @@ int (*get_func(char c))(va_list, char *, int *)
 	modif selector[] = {
 /*		{'b', p_itob}, Reserved for future use */
 		{'c', p_char},
-/*		{'d', p_dec}, Reserved for future use */
-/*		{'i', p_dec}, Reserved for future use */
+		{'d', p_dec},
+		{'i', p_dec},
 /*		{'o', p_int2oct}, Reserved for future use */
 /*		{'p', p_addr}, Reserved for future use */
 /*		{'r', p_rev_str}, Reserved for future use */
