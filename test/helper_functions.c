@@ -22,7 +22,7 @@ char *create_buffer(void)
 void write_buffer(char *buffer, int length)
 {
 	buffer[length + 1] = '\0';
-	write(1, buffer, (length + 1)); /* Print whole buffer in 1 syscall */
+	write(1, buffer, length); /* Print whole buffer in 1 syscall */
 	free(buffer);
 }
 
