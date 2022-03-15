@@ -39,13 +39,13 @@ int adds2buff(char *string, char *buffer, int *length)
 {
 	int i;
 
-	if ((*length) > 1020) /* Check if full and flush to stdo if true */
-	{
-		write(1, buffer, (*length)); /* Print whole buffer in 1 syscall */
-		*length = 0; /* Reset buffer position */
-	}
 	for (i = 0; string[i] != '\0'; i++)
 	{
+		if ((*length) > 1020) /* Check if full and flush to stdo if true */
+		{
+			write(1, buffer, (*length)); /* Print whole buffer in 1 syscall */
+			*length = 0; /* Reset buffer position */
+		}
 		buffer[(*length)] = string[i];
 		(*length)++;
 	}
