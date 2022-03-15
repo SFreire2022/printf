@@ -13,7 +13,7 @@ int main(void)
     int len2;
     unsigned int ui;
     void *addr;
-	unsigned char uschar = INT_MAX + 1024;
+	unsigned char uschar = INT_MAX;
 
     len = _printf("Let's try to printf a simple sentence.\n");
     len2 = printf("Let's try to printf a simple sentence.\n");
