@@ -126,12 +126,15 @@ int handle_modificators(char c, int *length, va_list ap, char *buffer)
 		return (-1);/* See if needed */
 	}
 	if (c == '%')
-		count = addc2buff('%', buffer, length);
-	func = get_func(c); /* Grab function */
-	if (func == NULL)  /*Handle fake id, write % followed by nextchar in format*/
 	{
 		count = addc2buff('%', buffer, length);
-		count += addc2buff(c, buffer, length);
+		return (count);
+	}
+	func = get_func(c); /* Grab function */
+	if (func == NULL)  /*Handle fake id, write % and return*/
+	{
+		count = addc2buff('%', buffer, length);
+		return (count);
 	}
 	else
 	{
