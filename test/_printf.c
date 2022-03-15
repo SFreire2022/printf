@@ -43,9 +43,11 @@ int (*get_func(char c))(va_list, char *, int *)
 int _printf(const char *format, ...)
 {
 	va_list ap;
-	int i = 0, c_count = 0, buff_pos = 0, h_count = 0;
+	unsigned int i = 0;
+	int c_count = 0, buff_pos = 0, h_count = 0;
 	char *buffer;
-	int *length = &buff_pos, *inc = &i;
+	int *length = &buff_pos;
+	unsigned int *inc = &i;
 
 	if (format == NULL) /* If no arg passed to _printf return -1 */
 		return (-1);

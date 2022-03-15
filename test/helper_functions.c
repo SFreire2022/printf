@@ -82,7 +82,8 @@ int addc2buff(char c, char *buffer, int *length)
  * @i: General va_list string format index
  * Return: The number of characters written to buff, if error return flag -1
  */
-int handle_modificators(char c, int *length, va_list ap, char *buffer, int *i)
+int handle_modificators(char c, int *length, va_list ap,
+	char *buffer, unsigned int *i)
 {
 	int (*func)(va_list, char *, int *); /* point to func and argtype va_list */
 	int count = 0;
