@@ -181,6 +181,7 @@ int _printf(const char *format, ...)
 			if (h_count == -1) /* If error retturn -1 and exit form _printf function */
 				return (-1);/* check if need to frees memory before exit */
 			c_count += h_count;
+			i++;
 		}
 	}
 	write_buffer(buffer, buff_pos);
