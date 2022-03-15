@@ -147,6 +147,7 @@ int handle_modificators(char c, int *length, va_list ap, char *buffer, int *i)
 			free(buffer);
 			return (-1);
 		}
+		(*i)++;
 	}
 	return (count);
 }
