@@ -112,9 +112,10 @@ int addc2buff(char c, char *buffer, int *length)
  * @length: Position in buffer
  * @ap: Argument pointer
  * @buffer: Buffer holding string to print
+ * @i: General va_list string format index
  * Return: The number of characters written to buff, if error return flag -1
  */
-int handle_modificators(char c, int *length, va_list ap, char *buffer)
+int handle_modificators(char c, int *length, va_list ap, char *buffer, int *i)
 {
 	int (*func)(va_list, char *, int *); /* point to func and argtype va_list */
 	int count = 0;
@@ -128,6 +129,7 @@ int handle_modificators(char c, int *length, va_list ap, char *buffer)
 	if (c == '%')
 	{
 		count = addc2buff('%', buffer, length);
+		(*i)++;
 		return (count);
 	}
 	func = get_func(c); /* Grab function */
@@ -159,7 +161,7 @@ int _printf(const char *format, ...)
 	va_list ap;
 	int i = 0, c_count = 0, buff_pos = 0, h_count = 0;
 	char *buffer;
-	int *length = &buff_pos;
+	int *length = &buff_pos, *inc = &i;
 
 	if (format == NULL) /* If no arg passed to _printf return -1 */
 		return (-1);
@@ -177,11 +179,10 @@ int _printf(const char *format, ...)
 		else /* if %, hanlde nextchar */
 		{
 			i++;
-			h_count = handle_modificators(format[i], length, ap, buffer);
+			h_count = handle_modificators(format[i], length, ap, buffer, inc);
 			if (h_count == -1) /* If error retturn -1 and exit form _printf function */
 				return (-1);/* check if need to frees memory before exit */
 			c_count += h_count;
-			i++;
 		}
 	}
 	write_buffer(buffer, buff_pos);

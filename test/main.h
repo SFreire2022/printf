@@ -24,7 +24,7 @@ char *create_buffer(void);
 void write_buffer(char *buffer, int length);
 int adds2buff(char *string, char *buffer, int *length);
 int addc2buff(char c, char *buffer, int *length);
-int handle_modificators(char c, int *length, va_list ap, char *buffer);
+int handle_modificators(char c, int *length, va_list ap, char *buffer, int *i);
 /* Prototype modificator functions */
 /* int p_itob(va_list ap, char *buffer, int *length); Res for future use */
 int p_char(va_list ap, char *buffer, int *length);
