@@ -16,7 +16,7 @@ Programs written in C:
 | % | a '%' is written but no argument is converted. The complete version specification is '%%'.|
 | d, i | The int argument is converted to signed decimal notation|
 
-## Examples
+# Examples
 
 ## String
 * Input: _printf("%s\n", 'This is a string.');
@@ -29,3 +29,13 @@ Programs written in C:
 ## Integer
 * Input: _printf("There are %i dozens in a gross\n", 12);
 * Output: There are 12 dozens in a gross
+
+# Authorized functions and macros
+
+* write (man 2 write)
+* malloc (man 3 malloc)
+* free (man 3 free)
+* va_start (man 3 va_start)
+* va_end (man 3 va_end)
+* va_copy (man 3 va_copy)
+* va_arg (man 3 va_arg)
