@@ -22,11 +22,10 @@ Programs written in C:
 * Input: _printf("%s\n", 'This is a string.');
 * Output: This is a string.Input: _printf("%s\n", 'This is a string.');
 
-* Character
-Input: _printf("The first letter in the alphabet is %c\n", 'A');
-Output: The first letter in the alphabet is A
+## Character
+* Input: _printf("The first letter in the alphabet is %c\n", 'A');
+* Output: The first letter in the alphabet is A
 
-* Integer
-Input: _printf("There are %i dozens in a gross\n", 12);
-
-Output: There are 12 dozens in a gross
+## Integer
+* Input: _printf("There are %i dozens in a gross\n", 12);
+* Output: There are 12 dozens in a gross
