@@ -14,11 +14,6 @@ int p_unsig(va_list ap, char *buffer, int *length)
 	int count = 0;
 
 	n = va_arg(ap, unsigned int);
-	if (n < 0)
-	{
-		count = addc2buff('-', buffer, length);
-		n = n * -1;
-	}
 	b = n;
 	c = 1;
 	for (a = 1 ; b > 9 ; a++)
