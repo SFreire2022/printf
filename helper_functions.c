@@ -43,7 +43,7 @@ int adds2buff(char *string, char *buffer, int *length)
 	{
 		if ((*length) > 1023) /* Check if full and flush to stdo if true */
 		{
-			write(1, buffer, (*length)-1); /* Print whole buffer in 1 syscall */
+			write(1, buffer, (*length) - 1); /* Print whole buffer in 1 syscall */
 			*length = 0; /* Reset buffer position */
 		}
 		buffer[(*length)] = string[i];
@@ -64,7 +64,7 @@ int addc2buff(char c, char *buffer, int *length)
 {
 	if ((*length) > 1023) /* If full, flush to stdo */
 	{
-		write(1, buffer, (*length)-1); /* Print whole buffer in 1 syscall */
+		write(1, buffer, (*length) - 1); /* Print whole buffer in 1 syscall */
 		*length = 0; /* Reset buffer position */
 	}
 	buffer[(*length)] = c;
