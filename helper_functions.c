@@ -88,12 +88,8 @@ int handle_modificators(char c, int *length, va_list ap, char *buffer,
 	int (*func)(va_list, char *, int *); /* point to func and argtype va_list */
 	int count = 0;
 
-/*	if (c == '\0')*/
-/*	{*/
-/*		va_end(ap);*/
-/*		free(buffer);*/
-/*		return (-1);*/
-/*	} See if needed */
+	if (c == '\0')
+		return (0);
 	if (c == '%')
 	{
 		count = addc2buff('%', buffer, length);
