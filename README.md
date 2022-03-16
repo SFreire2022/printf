@@ -12,9 +12,9 @@ Programs written in C:
 | -------- | -----------|
 | `printf` | function that produces output according to a format functions %c %s |
 | `c` | int argument is converted to an unsigned char, then the resulting character is written. |
-| `s | the const char * argument is expected to be a pointer to an array of character type (pointer to a string). Characters from the array are written up to a terminating null byte, but do ot include the terminating null byte. |
-| % | a '%' is written but no argument is converted. The complete version specification is '%%'.|
-| d, i | The int argument is converted to signed decimal notation|
+| `s` | the const char * argument is expected to be a pointer to an array of character type (pointer to a string). Characters from the array are written up to a terminating null byte, but do ot include the terminating null byte. |
+| `%` | a '%' is written but no argument is converted. The complete version specification is '%%'.|
+| `d, i` | The int argument is converted to signed decimal notation|
 
 # Examples
 
