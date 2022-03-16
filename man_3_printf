@@ -32,7 +32,8 @@ A '%' is written but no argument is converted. The complete version specificatio
 .B d, i
 The int argument is converted to signed decimal notation.
 .SH EXAMPLE
-
+Input: _printf("%s\n", 'This is a string.');
+Output: This is a string.
 .SH SEE ALSO
 .I printf(3)
 .SH BUGS
