@@ -109,7 +109,7 @@ int handle_modificators(char c, int *length, va_list ap, char *buffer,
 	else
 	{
 		count = func(ap, buffer, length); /* Set count with func returned value */
-		if (count == 0)
+		if (count == -1)/* Handle posible function errors */
 		{
 			va_end(ap);
 			free(buffer);
