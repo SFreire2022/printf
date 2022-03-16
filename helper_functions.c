@@ -91,8 +91,8 @@ int handle_modificators(char c, int *length, va_list ap, char *buffer,
 	if (c == '\0')
 	{
 		va_end(ap);
-		free(buffer);
-		return (-1);/* See if needed */
+		free(buffer);/* Task 0 (check 16)¿? */
+		return (-1);/* must be return (0) without clean mem and exit normaly */
 	}
 	if (c == '%')
 	{
