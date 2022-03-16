@@ -89,7 +89,11 @@ int handle_modificators(char c, int *length, va_list ap, char *buffer,
 	int count = 0;
 
 	if (c == '\0')
-		return (0);
+	{
+		va_end(ap);
+		free(buffer);
+		return (-1);/* See if needed */
+	}
 	if (c == '%')
 	{
 		count = addc2buff('%', buffer, length);
