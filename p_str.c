@@ -14,7 +14,7 @@ int p_str(va_list ap, char *buffer, int *length)
 	string = va_arg(ap, char *);
 	if (string == NULL)
 /*		return (0); for debug */
-		string = "(null)"
+		string = "(null)";
 	count = adds2buff(string, buffer, length);
 	return (count);
 }
