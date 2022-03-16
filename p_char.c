@@ -12,9 +12,6 @@ int p_char(va_list ap, char *buffer, int *length)
 	int count = 0;
 
 	c = va_arg(ap, int); /* declare as int to print special chars */
-/*	if (c == 0)*/
-/*		c = '\0'; not protect null character */
-
 	count = addc2buff(c, buffer, length);
 
 	return (count);
