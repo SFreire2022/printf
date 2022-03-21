@@ -27,7 +27,7 @@ int addc2buff(char c, char *buffer, int *length);
 int handle_modificators(char c, int *length, va_list ap, char *buffer,
 	unsigned int *i);
 /* Prototype modificator functions */
-/* int p_itob(va_list ap, char *buffer, int *length); Res for future use */
+int p_itob(va_list ap, char *buffer, int *length);
 int p_char(va_list ap, char *buffer, int *length);
 int p_dec(va_list ap, char *buffer, int *length);
 /* int p_int2oct(va_list ap, char *buffer, int *length); Res for future use */
