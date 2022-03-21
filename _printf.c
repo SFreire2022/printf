@@ -10,7 +10,7 @@ int (*get_func(char c))(va_list, char *, int *)
 	int i = 0;
 
 	modif selector[] = {
-/*		{'b', p_itob}, Reserved for future use */
+		{'b', p_itob},
 		{'c', p_char},
 		{'d', p_dec},
 		{'i', p_dec},
