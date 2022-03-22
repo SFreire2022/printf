@@ -8,10 +8,11 @@
  */
 int p_itob(va_list ap, char *buffer, int *length)
 {
-	int i, k, j = 0, twos = 1, c = 0;
-	char str_bin[32];
+	long int i, k, twos = 1; /* long to hanlde bigger numbers*/
+	int j = 0, c = 0;
+	char str_bin[64];
 
-	k = va_arg(ap, int);
+	k = va_arg(ap, long int); /* long to hanlde bigger numbers*/
 	i = k;
 	/* account for negative numbers with '1' at index 0 */
 	if (k < 0)
